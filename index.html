@@ -2,77 +2,33 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram 연결 중</title>
+    <meta name="viewport" content="https://t.me/+IentpPFPRWwxY2Q1">
+    
+    <title>텔레그램 입장하기</title>
+    <meta property="og:title" content="텔레그램 공식 채널">
+    <meta property="og:description" content="클릭 시 3초 후 자동으로 연결됩니다.">
+    <meta property="og:image" content="[여기에 미리보기용 이미지 주소 넣기]">
+    <meta property="og:url" content="https://[본인아이디].github.io/[레포이름]">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-        }
-        .container {
-            width: 90%;
-            max-width: 400px;
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-            padding-bottom: 30px;
-        }
-        /* 메인 이미지 스타일 */
-        .main-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .content {
-            padding: 25px 20px;
-        }
-        .loading-text {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-        }
-        .timer-box {
-            font-size: 14px;
-            color: #888;
-        }
-        #seconds {
-            color: #0088cc;
-            font-weight: bold;
-        }
-        .btn-direct {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 12px 30px;
-            background: #0088cc;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn-direct:hover {
-            background: #0077b5;
-        }
+        /* (기존 CSS 스타일 동일) */
+        body { margin: 0; padding: 0; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+        .container { width: 90%; max-width: 400px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; text-align: center; padding-bottom: 30px; }
+        .main-img { width: 100%; height: auto; display: block; }
+        .content { padding: 25px 20px; }
+        .loading-text { font-size: 18px; font-weight: bold; color: #333; margin-bottom: 8px; }
+        #seconds { color: #0088cc; font-weight: bold; }
+        .btn-direct { margin-top: 20px; display: inline-block; padding: 12px 30px; background: #0088cc; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="https://github.com/naver-inv/com/blob/927709a3a1038ada2cf76526174412323c3699bb/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%88%98%EC%9D%B5%EC%9D%B8%EC%A6%9D_2026.%204.%2022..png" alt="Thumbnail" class="main-img">
+    <img src="[여기에 이미지 주소 넣기]" alt="Thumbnail" class="main-img">
 
     <div class="content">
         <div class="loading-text">텔레그램 채널로 이동합니다</div>
-        <div class="timer-box"><span id="seconds">3</span>초 후 자동으로 연결됩니다.</div>
-        
+        <div><span id="seconds">3</span>초 후 자동으로 연결됩니다.</div>
         <a href="https://t.me/+IentpPFPRWwxY2Q1" class="btn-direct">지금 바로 입장하기</a>
     </div>
 </div>
@@ -80,13 +36,10 @@
 <script>
     const targetUrl = "https://t.me/+IentpPFPRWwxY2Q1";
     let countdown = 3;
-
     const timerElement = document.getElementById('seconds');
-
     const interval = setInterval(() => {
         countdown--;
         timerElement.innerText = countdown;
-
         if (countdown <= 0) {
             clearInterval(interval);
             window.location.href = targetUrl;
